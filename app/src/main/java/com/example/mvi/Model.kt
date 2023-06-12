@@ -1,5 +1,7 @@
 package com.example.mvi
 
-data class CounterModel(
-    val count :Int =0
-)
+data class Todo(
+    val id: Int,
+    val title: String,
+    val completed: Boolean
+    )

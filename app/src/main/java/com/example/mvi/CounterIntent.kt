@@ -1,13 +1,6 @@
 package com.example.mvi
 
-sealed class CounterIntent{
-    object Increment :CounterIntent()
-    object Decrement :CounterIntent()
+sealed class TodoIntent{
+object LoadTodosIntent:TodoIntent()
 }
 
-fun counterReducer(model: CounterModel,intent: CounterIntent):CounterModel{
-    return when(intent){
-        CounterIntent.Increment -> model.copy(count = model.count+1)
-        CounterIntent.Decrement -> model.copy(count = model.count-1)
-    }
-}
